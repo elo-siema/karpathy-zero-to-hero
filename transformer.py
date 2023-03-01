@@ -134,8 +134,8 @@ class Block(nn.Module):
         x = x + self.ffwd(self.ln2(x))
         return x
 
-# super simple bigram model
-class BigramLanguageModel(nn.Module):
+
+class TransformerLanguageModel(nn.Module):
 
     def __init__(self, vocab_size, n_embed):
         super().__init__() 
