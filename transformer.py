@@ -190,7 +190,7 @@ class TransformerLanguageModel(nn.Module):
             idx = torch.cat((idx, idx_next), dim=1) # (B, T+1)
         return idx
 
-model = BigramLanguageModel(vocab_size, n_embed=384)
+model = TransformerLanguageModel(vocab_size, n_embed=384)
 m = model.to(device)
 
 # create a PyTorch optimizer
